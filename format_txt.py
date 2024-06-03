@@ -1,6 +1,6 @@
 import os
 
-file = open("organizeyourmusic_raw.txt", "r")
+file = open("1_top100_raw.txt", encoding = "utf-8")
 lines = file.readlines()
 
 lines = [line.replace('\t', ",") for line in lines]
@@ -14,5 +14,5 @@ for line in lines:
 #lines = [line.replace('‑', "/") for line in lines]
 
 # finally, write lines in the file
-with open('output.txt', 'w') as f:
+with open('output.txt', 'w', encoding="utf-8") as f:
     f.writelines(lines)

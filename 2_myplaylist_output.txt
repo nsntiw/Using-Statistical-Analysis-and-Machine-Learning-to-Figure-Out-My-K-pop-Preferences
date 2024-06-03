@@ -1,4 +1,4 @@
-l  title,artist,top genre,year,added,bpm,nrgy,dnce,dB,live,val,dur,acous,spch,pop
+title,artist,top genre,year,added,bpm,nrgy,dnce,dB,live,val,dur,acous,spch,pop
 Super Shy,NewJeans,k-pop,2023,2024‑05‑27,150,82,78,-6,15,52,155,18,7,83
 OMG,NewJeans,k-pop,2023,2024‑05‑27,127,77,80,-4,11,74,212,36,4,81
 Ditto,NewJeans,k-pop,2022,2024‑05‑27,134,64,81,-6,10,18,186,3,11,80
