@@ -1,6 +1,6 @@
 import os
 
-file = open("1_top100_raw.txt", encoding = "utf-8")
+file = open("1_myplaylist_raw.txt", encoding = "utf-8")
 lines = file.readlines()
 
 lines = [line.replace('\t', ",") for line in lines]

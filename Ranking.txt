@@ -1,12 +1,3 @@
-http://organizeyourmusic.playlistmachinery.com/index.html
-
-Spotify website-> open playlist-> open in app
-spotify:playlist:5T9aVN5nUTYTyuzP4wsC4u
-
-remove 太妍 from csv because of encoding format
-remove sel,, from column title
-
-
 1: ASAP
 2: Sorry
 3: She's in the Rain

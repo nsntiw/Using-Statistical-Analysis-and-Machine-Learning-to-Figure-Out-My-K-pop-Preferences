@@ -1,5 +1,5 @@
 import csv
-f = open("3_top100_formatted.csv", 'r')
+f = open("3_myplaylist_formatted.csv", 'r')
 csvReader = csv.reader(f)
 length = 0
 temp = True
