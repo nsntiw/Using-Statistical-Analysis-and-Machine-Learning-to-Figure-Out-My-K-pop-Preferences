@@ -33,14 +33,17 @@ for data_type in ['bpm','nrgy','dnce','dB','live','val','dur','acous','spch','po
     #scatter plot
     x = range(len(ranked_data_list))
     y = [int(e[data_type]) for e in ranked_data_list]
+    y = np.array(y)
+    #Normalise to 1-0, doesn't affect correlation
+    #y = (y-np.min(y))/(np.max(y)-np.min(y))
     plt.scatter(x, y)
     #regression and calculate r, p
     linear_regression = np.poly1d(np.polyfit(x, y, 1))(x)
-    quadratic_regression = np.poly1d(np.polyfit(x, y, 2))(x)
+    #quadratic_regression = np.poly1d(np.polyfit(x, y, 2))(x)
     r, p = pearsonr(x, y)
     r2 = r**2
     plt.plot(x, linear_regression, color = 'red', label = f"r = {r:.3f}, r2 = {r2:.3f}, p = {p:.3f}")
-    plt.plot(x, quadratic_regression, color = 'yellow')
+    #plt.plot(x, quadratic_regression, color = 'yellow')
     #labeling
     plt.xlabel('Ranking')
     plt.ylabel(data_type)
@@ -70,17 +73,16 @@ for data_type in ['bpm','nrgy','dnce','dB','live','val','dur','acous','spch','po
 #spch r = 0.233, p = 0.090
 #pop r = -0.128, p = 0.357
 
-import numpy as np
+#import numpy as np
+#x = np.linspace(0.0, 5.0)
 
-x = np.linspace(0.0, 5.0)
+#y = 10.0 + 5.0 * x
 
-y = 10.0 + 5.0 * x
+#data = odr.Data(x, y)
 
-data = odr.Data(x, y)
+#odr_obj = odr.ODR(data, odr.multilinear)
 
-odr_obj = odr.ODR(data, odr.multilinear)
+#output = odr_obj.run()
 
-output = odr_obj.run()
-
-print(output.beta)
-[10.  5.]
+#print(output.beta)
+#[10.  5.]
